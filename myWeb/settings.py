@@ -77,12 +77,15 @@ WSGI_APPLICATION = 'myWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myWebDatabase',
-        'USER': 'root',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'myWebDatabase',
+        #'USER': 'root',
+        #'PASSWORD': '1234',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
     }
 }
 
@@ -117,8 +120,11 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+#mysql
+#USE_TZ = False
 
+#sqlite
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -127,3 +133,4 @@ USE_TZ = False
 #              '/templatetags/']
 
 STATIC_URL = '/static/'
+STATIC_ROOt = os.path.join(BASE_DIR, 'static')
