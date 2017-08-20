@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2llrb@$rtuh(&&4!2#k$8wr_rl_7!pn$#cgf)fd5=1aglk32j@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+#DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '45.32.22.137']
 
 
 # Application definition
@@ -133,4 +133,4 @@ USE_TZ = True
 #              '/templatetags/']
 
 STATIC_URL = '/static/'
-STATIC_ROOt = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
